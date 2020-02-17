@@ -75,5 +75,28 @@ INSERT INTO tbl_learningactivities (idclass, idteacher, idsubject)
     (4,1,3),
     (1,2,6),
     (2,4,5);
-    
-    
+
+
+-- select la.idteacher, t.fullname, la.idclass, c.name, la.idsubject, s.name
+-- 	from tbl_learningactivities as la
+-- 		inner join tbl_teacher as t on t.idteacher = la.idteacher
+--         inner join tbl_class as c on c.idclass = la.idclass
+--         inner join tbl_subject as s on s.idsubject = la.idsubject
+-- 			where t.idteacher = 1 or 2 or 3 or 4
+-- 				order by la.idteacher, la.idclass, la.idsubject;
+--                 
+-- SELECT tbl_learningactivities.idclass , tbl_learningactivities.idteacher , tbl_learningactivities.idsubject
+-- 	FROM tbl_learningactivities 
+-- 		INNER JOIN tbl_teacher ON tbl_teacher.idteacher = tbl_learningactivities.idteacher 
+-- 		INNER JOIN tbl_class ON tbl_class.idclass = tbl_learningactivities.idclass 
+-- 		INNER JOIN tbl_subject ON tbl_subject.idsubject = tbl_learningactivities.idsubject
+-- 			WHERE tbl_learningactivities.idteacher = 1 or 2 or 3 or 4
+-- 				ORDER BY tbl_learningactivities.idteacher, tbl_learningactivities.idclass, tbl_learningactivities.idsubject;
+--                 
+-- SELECT tbl_learningactivities.idclass AS tbl_learningactivities_idclass, tbl_learningactivities.idteacher AS tbl_learningactivities_idteacher, tbl_learningactivities.idsubject AS tbl_learningactivities_idsubject, tbl_teacher.idteacher AS tbl_teacher_idteacher, tbl_teacher.fullname AS tbl_teacher_fullname, tbl_teacher.qualification AS tbl_teacher_qualification, tbl_subject.idsubject AS tbl_subject_idsubject, tbl_subject.name AS tbl_subject_name
+-- 	FROM tbl_learningactivities 
+--     INNER JOIN tbl_teacher ON tbl_teacher.idteacher = tbl_learningactivities.idteacher 
+--     INNER JOIN tbl_class ON tbl_class.idclass = tbl_learningactivities.idclass 
+--     INNER JOIN tbl_subject ON tbl_subject.idsubject = tbl_learningactivities.idsubject
+-- 		WHERE tbl_learningactivities.idteacher = 1 or 2 or 3 or 4
+-- 			ORDER BY tbl_learningactivities.idteacher, tbl_learningactivities.idclass, tbl_learningactivities.idsubject;
