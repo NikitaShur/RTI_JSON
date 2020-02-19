@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 
 
+
 def mysql_connect(user, password, host, port, database):
 
     mysql_url = 'mysql://{0}:{1}@{2}:{3}/{4}?charset=utf8'.format(user, password, host, port, database)
